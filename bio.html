@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio & Contatti - Marco Rossi</title>
+    <meta name="description" content="Biografia e contatti di Marco Rossi, fotografo di strada e urban explorer. Scopri la sua visione artistica e le sue esposizioni.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Marco Rossi</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="bio.html">Bio & Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="bio-container fade-in">
+            <!-- Left Column - Image -->
+            <div class="bio-image">
+                <img src="images/marco-rossi-portrait.png" alt="Marco Rossi - Ritratto del fotografo" loading="lazy">
+            </div>
+
+            <!-- Right Column - Content -->
+            <div class="bio-content">
+                <h1>Marco Rossi</h1>
+                <h2>Urban Explorer & Storyteller</h2>
+
+                <p>Nato a Milano nel 1985, Marco Rossi ha sviluppato la sua passione per la fotografia di strada durante gli anni universitari, quando iniziò a documentare i cambiamenti urbani della sua città natale. La sua ricerca artistica si concentra sulla cattura di momenti autentici nella vita quotidiana urbana, esplorando il rapporto tra l'individuo e l'ambiente metropolitano.</p>
+
+                <p>Il suo approccio fotografico è caratterizzato da una sensibilità particolare per la luce naturale e le geometrie architettoniche. Marco crede che ogni strada racconti una storia e che ogni angolo nasconda un frammento di umanità da preservare. Le sue immagini catturano l'essenza poetica del quotidiano, trasformando scene ordinarie in narrazioni visive straordinarie.</p>
+
+                <p>Negli ultimi dieci anni ha viaggiato attraverso le principali metropoli europee - Parigi, Berlino, Londra, Barcellona - documentando le diverse anime urbane e le loro trasformazioni sociali. Il suo lavoro esplora temi come la solitudine urbana, la resilienza delle comunità e l'evoluzione degli spazi pubblici nell'era digitale.</p>
+
+                <p>Marco utilizza principalmente fotocamere analogiche, prediligendo il bianco e nero per la sua capacità di rivelare l'essenza emotiva dei soggetti. La sua filosofia fotografica si basa sull'osservazione paziente e sul rispetto per le persone che incontra durante le sue esplorazioni urbane.</p>
+
+                <p>Attualmente vive e lavora a Milano, dove continua la sua ricerca fotografica concentrandosi sui quartieri in trasformazione e sulle nuove dinamiche sociali post-pandemiche. È anche docente di fotografia di strada presso l'Accademia di Belle Arti di Brera.</p>
+
+                <h3>Mostre & Riconoscimenti</h3>
+                
+                <p><strong>2024</strong> - "Metropoli Silenziose", mostra personale presso Galleria Carla Sozzani, Milano<br>
+                <strong>2023</strong> - Vincitore del Premio Street Photography Italia<br>
+                <strong>2022</strong> - "Urban Fragments", mostra collettiva al Centre Pompidou, Parigi</p>
+
+                <p><strong>2021</strong> - "Città Invisibili", progetto espositivo presso Palazzo Reale, Milano<br>
+                <strong>2020</strong> - Finalista al World Press Photo nella categoria Street Photography<br>
+                <strong>2019</strong> - "European Streets", tour espositivo in 8 città europee</p>
+
+                <h3>Contatti & Social</h3>
+                
+                <p>Per commissioni fotografiche, collaborazioni editoriali o informazioni sui workshop di fotografia di strada, non esitate a contattarmi. Sono sempre interessato a nuovi progetti che esplorino la dimensione umana degli spazi urbani.</p>
+
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:marco.rossi@urbanexplorer.it">marco.rossi@urbanexplorer.it</a></p>
+                    <p><strong>Instagram:</strong> <a href="#" target="_blank">@marcorossi_streets</a></p>
+                    <p><strong>Behance:</strong> <a href="#" target="_blank">Marco Rossi Photography</a></p>
+                    <p><strong>Location:</strong> Milano, Italia</p>
+                    <p><strong>Workshop:</strong> Accademia di Belle Arti di Brera</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Marco Rossi. All rights reserved.</p>
+        <p class="demo-note">Progetto dimostrativo per portfolio</p>
+    </footer>
+
+    <!-- JavaScript for smooth loading -->
+    <script>
+        window.addEventListener('load', () => {
+            const bioContainer = document.querySelector('.bio-container');
+            bioContainer.style.opacity = '0';
+            bioContainer.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                bioContainer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                bioContainer.style.opacity = '1';
+                bioContainer.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

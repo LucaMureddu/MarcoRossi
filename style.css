@@ -1,0 +1,324 @@
+/* Marco Rossi Portfolio - Minimal Light Theme */
+
+/* Fonts are now loaded via <link> in HTML for better performance */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Main Content */
+main {
+    margin-top: 100px;
+    padding: 0 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Portfolio Grid (Masonry Layout) */
+.portfolio-grid {
+    columns: 4;
+    column-gap: 30px;
+    margin-bottom: 80px;
+}
+
+.portfolio-item {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    /* Performance: reserve space to reduce CLS on lazy-loaded images */
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+}
+
+.portfolio-item:hover img {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Bio Page Styles */
+.bio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.bio-image {
+    position: sticky;
+    top: 120px;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: grayscale(100%);
+    /* Performance: reserve space to reduce CLS on bio image */
+    content-visibility: auto;
+    contain-intrinsic-size: 500px 650px;
+}
+
+.bio-content h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.bio-content h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 40px;
+    letter-spacing: 0.01em;
+}
+
+.bio-content h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 60px 0 20px 0;
+    letter-spacing: -0.01em;
+}
+
+.bio-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-info a:hover {
+    border-bottom-color: #1a1a1a;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 60px 40px;
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Footer note style */
+.demo-note {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #999;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        columns: 3;
+        column-gap: 25px;
+    }
+    
+    main {
+        padding: 0 30px;
+    }
+    
+    header {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        columns: 2;
+        column-gap: 20px;
+    }
+    
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+    
+    .bio-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .bio-image {
+        position: static;
+    }
+    
+    .bio-content h1 {
+        font-size: 36px;
+    }
+    
+    .nav-links {
+        gap: 25px;
+    }
+    
+    main {
+        padding: 0 20px;
+        margin-top: 80px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        columns: 1;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .bio-content h1 {
+        font-size: 28px;
+    }
+    
+    .bio-content h2 {
+        font-size: 16px;
+    }
+}

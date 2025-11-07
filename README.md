@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-* [cite_start]**Guarda il portfolio live:** [https://marcorossi.netlify.app/](https://marcorossi.netlify.app/) [cite: 99]
+* [cite_start]**Guarda il portfolio live:** https://marco-rossi-one.vercel.app/ [cite: 99]
 
 ## 🎯 Obiettivo del Progetto
 
